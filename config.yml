@@ -1,0 +1,10 @@
+#generic example of the yaml template
+quantitative_feature: 
+  type: scalar
+  template: Text describing the {value} of the quantitative feature
+
+
+boolean_feature: 
+  type: categorical
+  true: Text to apply if the feature has the value true
+  false: Text to apply if the feature has the value false

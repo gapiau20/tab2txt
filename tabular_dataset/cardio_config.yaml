@@ -1,0 +1,17 @@
+#Admission HR, Admission SBP, Admission Glucose (mmol/L), Admission Cholesterol, Smoker
+Admission HR: 
+  type: scalar
+  template: Patient admitted with a heartrate of {value} bpm.
+
+Admission SBP: 
+  type: scalar
+  template: Patient SBP was {value} mmHg at admission.
+
+Admission Glucose: 
+  type: scalar
+  template: Patient glucose level was of {value} mmHg.
+
+Smoker: 
+  type: boolean
+  true: Patient is a smoker. 
+  false: Patient is non-smoker.
