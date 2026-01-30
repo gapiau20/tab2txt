@@ -10,6 +10,10 @@ def row_to_dict(row:pd.Series):
 # text generation
 # =========================
 def generate_patient_text(row, config:dict):
+    '''
+    Generates an output text only describing the row input variables
+    for a tabular column.
+    '''
     sentences = []
     groups = {}
 

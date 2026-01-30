@@ -14,12 +14,14 @@ COLUMN_CONFIG=parseYML('tabular_dataset\\cardio_config.yaml')
 # Main — Demo
 # =========================
 
-def main():
+def main(csv_file):
     #sample dataset
     config=COLUMN_CONFIG
     
-    df=pd.read_csv('tabular_dataset\\cardio.csv')
-    df["clinical_text"] = df.apply(lambda x:generate_patient_text(x,config), axis=1)
+    input_df=pd.read_csv(csv_file)
+
+    df=pd.DataFrame()
+    df["clinical_text"] = input_df.apply(lambda x:generate_patient_text(x,config), axis=1)
 
     for i, text in enumerate(df["clinical_text"], 1):
         print(f"Patient {i}:")
@@ -27,4 +29,4 @@ def main():
         print("-" * 60)
 
 if __name__ == "__main__":
-    main()
+    main('tabular_dataset\\cardio.csv')
