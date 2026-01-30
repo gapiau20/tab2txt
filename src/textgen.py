@@ -1,5 +1,11 @@
 import pandas as pd
 
+
+# =========================
+# dict generation
+# =========================
+def row_to_dict(row:pd.Series):
+    return row.to_dict()
 # =========================
 # text generation
 # =========================
@@ -8,7 +14,7 @@ def generate_patient_text(row, config:dict):
     groups = {}
 
     for col, rules in config.items():
-        value = row.get(col)
+        value = row[col]
 
         if pd.isna(value):
             continue
@@ -32,3 +38,4 @@ def generate_patient_text(row, config:dict):
         sentences.append("His " + " and ".join(group_texts))
 
     return ". ".join(sentences) + "."
+
