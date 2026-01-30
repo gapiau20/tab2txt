@@ -7,11 +7,15 @@ Admission SBP:
   type: scalar
   template: Patient SBP was {value} mmHg at admission.
 
-Admission Glucose: 
+Admission Glucose (mmol/L): 
   type: scalar
   template: Patient glucose level was of {value} mmHg.
 
+Admission Cholesterol: 
+  type: scalar
+  template: Patient cholesterol level was of {value} mg/dl.
+  
 Smoker: 
   type: boolean
-  true: Patient is a smoker. 
-  false: Patient is non-smoker.
+  "true": Patient is a smoker. 
+  "false": Patient is non-smoker.

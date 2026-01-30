@@ -4,7 +4,7 @@ quantitative_feature:
   template: Text describing the {value} of the quantitative feature
 
 
-boolean_feature: 
-  type: categorical
-  true: Text to apply if the feature has the value true
-  false: Text to apply if the feature has the value false
+boolean: 
+  type: boolean
+  yes: Text to apply if the feature has the value true
+  no: Text to apply if the feature has the value false

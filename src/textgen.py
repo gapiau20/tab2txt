@@ -1,8 +1,9 @@
+import pandas as pd
+
 # =========================
 # text generation
 # =========================
-
-def generate_patient_text(row, config=COLUMN_CONFIG):
+def generate_patient_text(row, config:dict):
     sentences = []
     groups = {}
 
